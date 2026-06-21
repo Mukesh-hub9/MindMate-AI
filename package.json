@@ -1,0 +1,18 @@
+{
+  "name": "mindmate",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "start": "npm run dev",
+    "install:backend": "npm install -w backend",
+    "install:frontend": "npm install -w frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.2"
+  }
+}
